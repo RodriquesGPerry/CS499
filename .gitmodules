@@ -1,0 +1,3 @@
+[submodule "animalShelter/frontend"]
+	path = animalShelter/frontend
+	url = git@github.com:RodriquesGPerry/CS499-FrontEnd.git
