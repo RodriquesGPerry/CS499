@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal Shelter</title>
+    <link rel="stylesheet" th:href="@{/animals-stylesheet.css}">
+</head>
+<body>
+<div class="topnav">
+    <a th:href="@{/form}">Form</a>
+    <a th:href="@{/}" class="active">Animals</a>
+</div>
+
+<div>
+    <h1>Animal Shelter</h1>
+    <table id="table">
+        <tr class="head">
+            <th>Age Upon Outcome</th>
+            <th>Animal Id</th>
+            <th>Animal Type</th>
+            <th>Breed</th>
+            <th>Color</th>
+            <th>DOB</th>
+            <th>Date Time</th>
+            <th>Month/Year</th>
+            <th>Name</th>
+            <th>Outcome Subtype</th>
+            <th>Outcome Type</th>
+            <th>Sex Upon Outcome</th>
+            <th>Age Upon Outcome/weeks</th>
+            <th> </th>
+        </tr>
+        <tr th:each="animal : ${animals}">
+            <td th:text="${animal.ageUponOutcome}"></td>
+            <td th:text="${animal.animalId}"></td>
+            <td th:text="${animal.animalType}"></td>
+            <td th:text="${animal.breed}"></td>
+            <td th:text="${animal.color}"></td>
+            <td th:text="${animal.dateOfBirth}"></td>
+            <td th:text="${animal.datetime}"></td>
+            <td th:text="${animal.monthYear}"></td>
+            <td th:text="${animal.name}"></td>
+            <td th:text="${animal.outcomeSubtype}"></td>
+            <td th:text="${animal.outcomeType}"></td>
+            <td th:text="${animal.sexUponOutcome}"></td>
+            <td th:text="${animal.ageUponOutcomeInWeeks}"></td>
+            <td>
+                <a role="button" style="color:white; background-color: #263238" class="table-button"
+                   th:href="@{/form(id = ${animal.animalId})}">Update</a>
+
+                <a role="button" style="color:white; background-color:red" class="table-button"
+                   th:href="@{/(id = ${animal.animalId})}">Delete</a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

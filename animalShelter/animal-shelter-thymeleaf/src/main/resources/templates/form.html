@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" th:href="@{/form-stylesheet.css}">
+</head>
+<body>
+    <div class="topnav">
+        <a th:href="@{/form}" class="active">Form</a>
+        <a th:href="@{/}">Animals</a>
+    </div>
+    <div>
+        <h2> Add an Animal </h2>
+        <form th:object="${animal}" method="post" th:action="@{/submitAnimal}">
+            <p style="color:red" th:errors="*{ageUponOutcome}"> </p>
+            <input th:field="*{ageUponOutcome}" type="text" placeholder="Age Upon Outcome">
+
+            <p style="color:red" th:errors="*{animalType}"> </p>
+            <input th:field="*{animalType}" type="text" placeholder="Animal Type">
+
+            <p style="color:red" th:errors="*{breed}"> </p>
+            <input th:field="*{breed}" type="text" placeholder="Breed">
+
+            <p style="color:red" th:errors="*{color}"> </p>
+            <input th:field="*{color}" type="text" placeholder="Color">
+
+            <p style="color:red" th:errors="*{dateOfBirth}"> </p>
+            <input th:field="*{dateOfBirth}" type="text" placeholder="Date of Birth">
+
+            <p style="color:red" th:errors="*{datetime}"> </p>
+            <input th:field="*{datetime}" type="text" placeholder="Date and Time">
+
+            <p style="color:red" th:errors="*{monthYear}"> </p>
+            <input th:field="*{monthYear}" type="text" placeholder="Month and Year">
+
+            <p style="color:red" th:errors="*{name}"> </p>
+            <input th:field="*{name}" type="text" placeholder="Name">
+
+            <p style="color:red" th:errors="*{outcomeSubtype}"> </p>
+            <input th:field="*{outcomeSubtype}" type="text" placeholder="Outcome Subtype">
+
+            <p style="color:red" th:errors="*{outcomeType}"> </p>
+            <input th:field="*{outcomeType}" type="text" placeholder="Outcome Type">
+
+            <p style="color:red" th:errors="*{sexUponOutcome}"> </p>
+            <input th:field="*{sexUponOutcome}" type="text" placeholder="Sex Upon Outcome">
+            <input th:field="*{locationLat}" type="text" placeholder="Location Latitude">
+            <input th:field="*{locationLong}" type="text" placeholder="Location Longitude">
+            <input th:field="*{ageUponOutcomeInWeeks}" type="text" placeholder="Age Upon Outcome Wks">
+            <input th:field="*{animalId}" type="hidden">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
