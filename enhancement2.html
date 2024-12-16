@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles.css" />
+		<title>Enhancement Two</title>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/CS499/code-review.html">Code Review</a></li>
+				<li><a href="/CS499/enhancement1.html">Enhancement One</a></li>
+				<li class="active"><a href="/CS499/enhancement2.htm2">Enhancement Two</a></li>
+				<li><a href="/CS499/enhancement3.htm3">Enhancement Three</a></li>
+			</ul>
+		</nav>
+		<h1 class="title">Algorithms & Data Structures</h1>
+		<p class="blurb">
+			By adding indexes to fields like breed, ageUponOutcome, and animalType I
+			demonstrated an understanding of data structures (B-trees in MongoDB).
+			These indexes reduce the complexity of search operations from O(n) to
+			O(log n). I also introduced pagination. By introducing pagination in the
+			repository and service layers, the application avoids fetching large
+			datasets all at once which improves performance and memory utilization,
+			showcasing knowledge of breaking down data into manageable chunks. Lastly,
+			the introduction of Redis caching stores frequently queried results,
+			reducing repeated database lookups. This leverages hashing and
+			memory-based storage to optimize read operations.
+			<br />
+			<br />
+			<strong>Improvements made to the artifact include:</strong>
+			<br />
+			Scalability: Added pagination and filtering ensures the application can
+			handle large datasets without performance degradation.
+			<br />
+			Performance: Implementing MongoDB indexes and Redis caching significantly
+			improves query performance and reduces latency.
+			<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Pagination minimizes data transfer over the network, optimizing the
+			application for real-time interactions.
+			<br />
+			<br />
+			By implementing caching and indexing, the enhancement demonstrates
+			proficiency in algorithmic design and optimization, effectively reducing
+			query complexity and improving response times. These methods, combined
+			with paginated and filtered data access, ensure the system can manage
+			large data volumes efficiently while balancing memory usage, processing
+			speed, and scalability—key aspects of managing trade-offs in design. The
+			use of modern tools like Redis for caching and MongoDB for indexing and
+			pagination showcases expertise in leveraging industry-standard
+			technologies to streamline data retrieval and improve performance.
+			Additionally, asynchronous processing with Spring Boot supports
+			scalability by enabling the system to handle high request volumes
+			effectively. Furthermore, the enhancements incorporate a strong security
+			mindset, as seen in its focus on secure data handling practices.
+			Strategies like time-limited caching prevent stale data issues, and the
+			restriction of cache storage to non-sensitive data ensures data privacy
+			and reduces the risk of leaks. By architecting secure data access
+			controls, the enhancements uphold data security principles, addressing
+			potential vulnerabilities proactively. Overall, the enhancement showcases
+			a well-rounded application of algorithmic principles, innovative tools,
+			and secure design practices, meeting and exceeding the planned course
+			outcomes.
+			<br />
+			<br />
+			A major challenge that I encountered during this enhancement was
+			integrating Redis caching into the application. Ensuring that caching was
+			implemented effectively to reduce database load, while also handling the
+			complexities of cache invalidation and maintaining data consistency,
+			required a lot of attention to detail. I had to carefully ensure that
+			sensitive data was not stored in the cache and that caching strategies
+			such as time-limited storage were applied correctly. Additionally,
+			debugging and fine-tuning the pagination and filtering functionality
+			involved working with both Spring Boot and MongoDB, which required
+			understanding how to best configure the database and repository layers to
+			meet specific use cases. Working through these I developed stronger
+			problem-solving skills and learned how to approach complex systems from a
+			design and optimization perspective. <br />
+			<br />
+			<br />
+			<br />
+		</p>
+	</body>
+</html>

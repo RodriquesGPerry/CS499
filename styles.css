@@ -1,0 +1,71 @@
+.blurb {
+  padding: 0 11rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.title {
+  text-align: center;
+  margin-top: 3.5rem;
+  font-size: 4rem;
+}
+
+/* Nav */
+nav {
+	background-color: #3a5f73;
+	height: 4rem;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+	display: flex;
+	justify-content: center;
+}
+
+nav ul li {
+	list-style: none;
+	padding: 1.2rem 1.5rem;
+	height: 1.6rem;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 1.5rem;
+}
+
+nav ul li:hover {
+	background-color: #849ca9;
+	color: #000000;
+  border: 1px solid #000000;
+}
+
+nav ul li.active {
+	background-color: #849ca9;
+}
+
+/* Home Page */
+.paragraph-heading {
+  margin-left: 5rem;
+}
+
+
+/* Code Review */
+.code-review-blurb {
+  margin-bottom: 5rem;
+}
+
+.youtube {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 5rem 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  nav ul li a {
+    font-size: 1.2rem;
+  }
+}
